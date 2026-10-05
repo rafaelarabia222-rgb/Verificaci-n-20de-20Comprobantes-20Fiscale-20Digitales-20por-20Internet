@@ -1,2 +1,909 @@
-# Verificaci-n-20de-20Comprobantes-20Fiscale-20Digitales-20por-20Internet
-Verificación de comprobantes fiscales digitales por internet
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="es-MX" class="js svg wf-opensans-n4-active wf-opensans-n3-active wf-opensans-n6-active wf-opensans-n7-active wf-opensans-i3-active wf-opensans-i4-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="CACHE-CONTROL" content="NO-CACHE"><meta http-equiv="PRAGMA" content="NO-CACHE"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta http-equiv="X-UA-Compatible" content="IE=8;IE=9"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/webfont.js.descarga" type="text/javascript" async=""></script><script async="" src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/analytics.js.descarga"></script><script src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/plugins.js.descarga"></script><script src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/main.js.descarga"></script><script src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/jquery-3.1.1.min.js.descarga" type="text/javascript"></script>
+    <script src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/jquery.maskedinput.js.descarga"></script>
+    <script src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/FuncionesComunes.js.descarga" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $.mask.definitions['h'] = "[A-Fa-f0-9]";
+
+            $.each($("input[mascara]"), function () {
+                var patternMask = $(this).attr('mascara');
+                switch (patternMask) {
+                    case "9999-99-99":
+                        $(this).mask(patternMask, { placeholder: "_" });
+                        break;
+                    case "GUID":
+                        $(this).mask("hhhhhhhh-hhhh-hhhh-hhhh-hhhhhhhhhhhh");
+                        break;
+                    default:
+                        $(this).mask(patternMask);
+                        break;
+                }
+            });
+
+        });
+    </script>
+
+    
+    <style>
+        @media print {
+            #noPrint {
+                display: none !important;
+                padding-top: 10px;
+            }
+        }
+    </style>
+
+   <link href="./Verificación de Comprobantes Fiscales Digitales por Internet_files/main_funcional.css" rel="stylesheet">
+
+    <style>
+        @media print {
+            header, footer, .noPrint {
+                display: none !important;
+                padding-top: 10px;
+            }
+
+            .contenido-imprimir {
+                width: 100% !important;
+                margin-top: -90px !important;
+                color: red !important;
+            }
+
+            .tituloImp {
+                font-size: 18px !important;
+                font-weight: normal !important;
+            }
+
+            .textosTablaPrint {
+                font-size: 16px !important;
+                font-weight: normal !important;
+            }
+            /* Elimina márgenes y padding de los contenedores superiores */
+            .container, .row {
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+            }
+            /* Opcional: elimina margen superior del body */
+            body {
+                margin-top: 0 !important;
+            }
+        }
+    </style>
+<title>Verificación de Comprobantes Fiscales Digitales por Internet</title><script type="text/javascript" src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/modernizr.js.descarga"></script><script type="text/javascript" src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/pace.min.js.descarga"></script><link rel="stylesheet" href="./Verificación de Comprobantes Fiscales Digitales por Internet_files/css" media="all"><script type="text/javascript" src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/analitycs.js.descarga"></script></head>
+<body class="reduce  pace-done" style="margin-top: 0px;"><header><nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: rgb(97, 18, 50) !important;"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarMainCollapse"><span class="sr-only">Interruptor de Navegación</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand-logo" href="https://www.gob.mx/"><img src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/logo_blanco.svg" alt="gobierno de mexico"></a></div><div class="collapse navbar-collapse" id="navbarMainCollapse" style="background-color: rgb(97, 18, 50) !important;"><ul class="nav navbar-nav navbar-right"><li><a href="https://www.gob.mx/tramites">Trámites</a></li><li><a href="https://www.gob.mx/gobierno">Gobierno</a></li><li><a href="https://www.gob.mx/busqueda"><span class="sr-only">Búsqueda</span><i class="icon-search"></i></a></li></ul></div></div></nav></header><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+    <form method="post" action="https://verificacfdi.facturaelectronica.sat.gob.mx/default.aspx?id=BD749768-AAED-479A-99A6-913F41280BD1&amp;re=LCO150612CH4&amp;rr=XAXX010101000&amp;tt=1449.000000&amp;fe=ltL56Q%3d%3d" id="aspnetForm" class="form-horizontal" role="form" enctype="multipart/form-data">
+<div class="aspNetHidden">
+
+
+
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/WebResource.axd" type="text/javascript"></script>
+
+
+<script src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/ScriptResource.axd" type="text/javascript"></script>
+<script src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/ScriptResource(1).axd" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	
+	
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'aspnetForm', ['tctl00$MainContent$UpnlBusqueda',''], [], ['ctl00$MainContent$BtnBusquedaXml',''], 90, 'ctl00');
+//]]>
+</script>
+
+
+        <main role="main">
+
+            <div id="cuerpo_principal" class="container top-buffer-submenu reduce">
+                <div id="encabezado" class="row">
+                    <div id="encabezadoPortal" class="noPrint">
+                        <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top" style="background-color: rgb(58, 11, 30) !important;">
+                            <div class="container">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
+                                        <span class="sr-only">Interruptor de Navegación</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="https://verificacfdi.facturaelectronica.sat.gob.mx/">FACTURA ELECTRÓNICA</a>
+                                </div>
+                            </div>
+                        </nav>
+
+                    </div>
+                </div>
+                <div id="cuerpo" style="margin-top: 25px" class="container  top-buffer-submenu reduce">
+                    
+
+    <div id="ctl00_MainContent_UpnlBusqueda">
+
+
+            <div class="container reduce">
+                <div class="row">
+                    <ol class="breadcrumb" id="noPrint">
+                        <li><a href="http://www.gob.mx/"><i class="icon icon-home"></i></a></li>
+                        <li><a href="https://verificacfdi.facturaelectronica.sat.gob.mx/default.aspx?id=BD749768-AAED-479A-99A6-913F41280BD1&amp;re=LCO150612CH4&amp;rr=XAXX010101000&amp;tt=1449.000000&amp;fe=ltL56Q==#">Inicio</a></li>
+                    </ol>
+                </div>
+                <div class="row">
+                    
+                    <img alt="Logo SHCP" class="logo shcp" src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/Logo-Hacienda-SAT.jpg" style="height: 42px; width: 309px;">
+                    <div><span>Versión 4.5.1</span></div>                    
+                </div>
+                <div class="row">
+                    <h3 class="titulo font-reduce reduce-titulo">Verificación de comprobantes fiscales digitales por internet</h3>
+                </div>
+
+                
+
+            </div>
+
+            <div>
+                <!-- Radio buttons -->
+                
+                <div class="radio-tabs-group noPrint hidden-print">
+                    <div class="radio-option">
+                        <input type="radio" name="tabs" id="chkFolio" class="radio" onclick="guardarTab('verificaFolio');cambiarTab('verificaFolio');">
+                        <label for="chkFolio" class="tab-label">Consulta por Folio Fiscal</label>
+                    </div>
+
+                    <div class="radio-option">
+                        <input type="radio" name="tabs" id="chkXml" class="radio" onclick="guardarTab('verificaXml');cambiarTab('verificaXml');">
+                        <label for="chkXml" class="tab-label">Consulta por archivo XML</label>
+                    </div>
+                </div>
+
+                <hr class="red noPrint">
+                <!-- Verifica por Folio -->
+                <div id="verificaFolio" class="tab-content active">
+
+                    <label class="control-label noPrint">A través de esta opción, usted podrá verificar si el comprobante fue certificado por el SAT </label>
+                    <br class="noPrint">
+                    <br class="noPrint">
+                    <div class="row form-group noPrint">
+                        <div class="col-md-4">
+                            <span id="ctl00_MainContent_LblUUIDTitulo" class="control-label">Folio fiscal</span><span class="form-text" id="marcaError_TxtUUID">*</span>:
+                            <input name="ctl00$MainContent$TxtUUID" type="text" maxlength="36" id="ctl00_MainContent_TxtUUID" class="form-control" style="text-transform: uppercase;">
+                            <small class="form-text form-text-error" id="mensajeError_TxtUUID" style="display: none">Este campo es obligatorio</small>
+                        </div>
+                        <div class="col-md-4">
+                            <span id="ctl00_MainContent_LblRfcEmisorTitulo" class="control-label">RFC emisor</span><span class="form-text" id="marcaError_TxtRfcEmisor">*</span>:
+                            <input name="ctl00$MainContent$TxtRfcEmisor" type="text" maxlength="13" id="ctl00_MainContent_TxtRfcEmisor" class="form-control" style="text-transform: uppercase">
+                            <small class="form-text form-text-error" id="mensajeError_TxtRfcEmisor" style="display: none">Este campo es obligatorio</small>
+                        </div>
+                        <div class="col-md-4">
+                            <span id="ctl00_MainContent_LblRfcReceptorTitulo" class="control-label">RFC receptor</span><span class="form-text" id="marcaError_TxtRfcReceptor">*</span>:
+                           <input name="ctl00$MainContent$TxtRfcReceptor" type="text" maxlength="13" id="ctl00_MainContent_TxtRfcReceptor" class="form-control" style="text-transform: uppercase">
+                            <small class="form-text form-text-error" id="mensajeError_TxtRfcReceptor" style="display: none">Este campo es obligatorio</small>
+                        </div>
+                    </div>
+                    <div class="row form-group noPrint">
+                        <div class="">
+                            <div class="col-md-4">
+                                <div id="captcha" class="captcha">
+                                    <img id="ctl00_MainContent_ImgCaptcha" class="captchaimage" src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/GeneraCaptcha.aspx">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <span id="ctl00_MainContent_LblTitleCaptcha" class="control-label">Proporcione los dígitos de la imagen</span><span class="form-text" id="marcaError_TxtCaptchaNumbers">*</span>:
+                                <input name="ctl00$MainContent$TxtCaptchaNumbers" type="text" maxlength="5" id="ctl00_MainContent_TxtCaptchaNumbers" class="form-control">
+                                <small class="form-text form-text-error" id="mensajeError_TxtCaptchaNumbers" style="display: none">Este campo es obligatorio</small>
+                            </div>
+                            <div class="col-md-4">
+                                <br>
+                                <input type="submit" name="ctl00$MainContent$BtnBusqueda" value="Verificar CFDI" onclick="return performCheck();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$BtnBusqueda&quot;, &quot;&quot;, true, &quot;Busqueda&quot;, &quot;&quot;, false, false))" id="ctl00_MainContent_BtnBusqueda" class="btn btn-primary pull-right">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 form-group noPrint">
+                        <div class="col-md-8 pull-left text-muted text-vertical-align-button">
+                            * Datos obligatorios
+                        </div>
+
+                    </div>
+                    <div class="noPrint">
+                        <input type="hidden" name="ctl00$MainContent$hdnTotal" id="ctl00_MainContent_hdnTotal">
+                        <input type="hidden" name="ctl00$MainContent$hdnSello" id="ctl00_MainContent_hdnSello">
+                        <input type="hidden" name="ctl00$MainContent$hdnConsultaFolio" id="ctl00_MainContent_hdnConsultaFolio" value="true">
+                    </div>
+                    <span id="ctl00_MainContent_lblParam" class="noPrint"></span>
+                    <!--Validadores Folio Fiscal-->
+                    <!--Campos Requeridos-->
+                    <div class="noPrint">
+                        
+                        <!--Formato por sección-->
+                        
+                        <!--Validadores RFC Emisor-->
+                        
+                        
+                        <!--Validadores RFC Receptor-->
+                        
+                        
+                        <!-- Validadores Captcha-->
+                        
+                        
+
+                        <div id="ctl00_MainContent_VsResumenErrores" class="col-md-12 alert alert-danger" style="color:Red;display:none;">
+
+</div>
+                        <br>
+                        
+                    </div>
+
+                    <div id="ctl00_MainContent_PnlResultados">
+	
+                        <div class="form-group" id="DivContenedor" style="margin-bottom: 0px;">
+                            <div class="col-sm-12" id="ContenedorDinamico" style="overflow: auto;">
+                                <table aria-label="resultado" class="table table-striped textosTablaPrint" style="margin-bottom: 0px;">
+                                    <tbody><tr class="headerTable">
+                                        <th scope="col">RFC del emisor </th>
+                                        <th scope="col">Nombre o razón social del emisor </th>
+                                        <th scope="col">RFC del receptor </th>
+                                        <th scope="col">Nombre o razón social del receptor </th>
+                                    </tr>
+                                    <tr class="dataTable">
+                                        <td>
+                                            <span id="ctl00_MainContent_LblRfcEmisor">LCO150612CH4</span>
+                                        </td>
+                                        <td>
+                                            <span id="ctl00_MainContent_LblNombreEmisor">LAGOON CONCEPT</span>
+                                        </td>
+                                        <td>
+                                            <span id="ctl00_MainContent_LblRfcReceptor">XAXX010101000</span>
+                                        </td>
+                                        <td>
+                                            <span id="ctl00_MainContent_LblNombreReceptor">TEBAEV EMILIANO ZAPATA</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="headerTable" id="trACuentaTerceros" style="display: none;">
+                                        <td colspan="4">
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr class="dataTable" id="trACuentaTerceros1" style="display: none;">
+                                        <td colspan="4">
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr class="headerTable">
+                                        <th scope="col">Folio fiscal </th>
+                                        <th scope="col">Fecha de expedición </th>
+                                        <th scope="col">Fecha certificación SAT </th>
+                                        <th scope="col">PAC que certificó </th>
+                                    </tr>
+                                    <tr class="dataTable">
+                                        <td>
+                                            <span id="ctl00_MainContent_LblUuid">BD749768-AAED-479A-99A6-913F41280BD1</span>
+                                        </td>
+                                        <td>
+                                            <span id="ctl00_MainContent_LblFechaEmision">2026-08-20T07:55:44</span>
+                                        </td>
+                                        <td>
+                                            <span id="ctl00_MainContent_LblFechaCertificacion">2026-08-20T08:55:44</span>
+                                        </td>
+                                        <td>
+                                            <span id="ctl00_MainContent_LblRfcPac">PPD101129EA3</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="headerTable">
+                                        <th scope="col">Total del CFDI </th>
+                                        <th scope="col">Efecto del comprobante </th>
+                                        <th scope="col">Estado CFDI </th>
+                                        <th id="ctl00_MainContent_thDinamico" style="visibility:visible;">Estatus de cancelación </th>
+	
+                                    </tr>
+                                    <tr class="dataTable">
+                                        <td>
+                                            <span id="ctl00_MainContent_LblMonto">$1,913.00</span>
+                                        </td>
+                                        <td>
+                                            <span id="ctl00_MainContent_LblEfectoComprobante">Ingreso</span>
+                                        </td>
+                                        <td>
+                                            <span id="ctl00_MainContent_LblEstado">Vigente</span>
+                                        </td>
+                                        <td id="ctl00_MainContent_tdDinamico" style="visibility:visible;">
+                                            <span id="ctl00_MainContent_LblEsCancelable">Cancelable sin aceptación</span>
+                                        </td>
+	
+                                    </tr>
+                                    <tr class="headerTable">
+                                        <th id="ctl00_MainContent_thEstatusCancelacion" style="visibility:hidden;border-top:0px;">Estatus de cancelación </th>
+	
+                                        <th id="ctl00_MainContent_thFechaCancelacion" style="visibility:hidden;border-top:0px;">Fecha de Cancelación </th>
+	
+                                        <th id="ctl00_MainContent_thMotivo" style="visibility: hidden; border-top: 0px;">Motivo</th>
+	
+                                        <th id="ctl00_MainContent_thFolioSustitucion" style="visibility: hidden; border-top: 0px;">Folio de Sustitución</th>
+	
+                                    </tr>
+                                    <tr class="dataTable">
+                                        <td id="ctl00_MainContent_tdEstatusCancelacion" style="visibility:hidden;border-top:0px;">
+                                            <span id="ctl00_MainContent_LblEstatusCancelacion"></span>
+                                        </td>
+	
+                                        <td id="ctl00_MainContent_tdFechaCancelacion" style="visibility:hidden;border-top:0px;">
+                                            <span id="ctl00_MainContent_LblFechaCancelacion"></span>
+                                        </td>
+	
+                                        <td id="ctl00_MainContent_tdMotivo" style="visibility: hidden; border-top: 0px;">
+                                            <span id="ctl00_MainContent_lblMotivo"></span>
+                                        </td>
+	
+                                        <td id="ctl00_MainContent_tdFolioSustitucion" style="visibility: hidden; border-top: 0px;">
+                                            <span id="ctl00_MainContent_lblFolioSustitucion"></span>
+                                        </td>
+	
+                                    </tr>
+
+                                </tbody></table>
+                            </div>
+                        </div>
+
+                        
+
+                        <div class="clearfix noPrint" style="margin: 0px 0px 10px 0px">
+                            <div class="pull-right">
+                                <input type="hidden" name="ctl00$MainContent$strBusqueda" id="ctl00_MainContent_strBusqueda" value="BD749768-AAED-479A-99A6-913F41280BD1|LCO150612CH4|XAXX010101000">
+                                <input type="button" id="BtnImprimir" value="Imprimir" onclick="javascript: window.print();" class="btn btn-primary">
+                            </div>
+                        </div>
+                    
+</div>
+
+                    <div id="printArea">
+                        
+                    </div>
+
+                    
+                    <br class="noPrint">
+                    <br class="noPrint">
+                    <br class="noPrint">
+
+                </div>
+
+                <!-- Verifica por Xml -->
+                
+                <div id="verificaXml" class="tab-content">
+                    <input type="file" name="ctl00$MainContent$fileUploadXML" id="ctl00_MainContent_fileUploadXML" class="form-control" accept=".xml,application/xml,text/xml" style="display: none;">
+                    
+                    
+                    <div class="row form-group noPrint">
+                        <label class="control-label noPrint">A través de esta opción, usted podrá verificar si el comprobante fue certificado por el SAT </label>
+                        <br>
+                        <div id="ctl00_MainContent_divCargaXml" class="col-md-9">
+                            <div id="ctl00_MainContent_divFileUploadXml">
+	
+                                 
+                                <div class="form-group noPrint">
+                                    <span id="LblXml" cssclass="control-label" style="display: block; margin-bottom: 5px;">Archivo XML <small id="validaLblXml" class="">*</small>:</span>
+                                    <div style="display: flex;">
+                                        <input type="text" id="txtArchivoXmlSeleccionado" class="form-control" placeholder="Seleccionar Archivo..." readonly="readonly" style="flex: 1;">
+                                        <label class="btn btn-primary" style="margin-left: 5px; height: 100%; display: flex; align-items: center; padding: 5px 25px; white-space: nowrap;" onclick="document.getElementById('ctl00_MainContent_fileUploadXML').click();">
+                                            Buscar
+                                        </label>
+                                    </div>
+                                    <small id="validaTxtXml" class="form-text form-text-error" style="display: none; margin-top: 5px;">
+                                        Este campo es obligatorio
+                                    </small>
+                                </div>
+                                 
+                            
+</div>
+                        </div>
+                        <div class="col-md-9"></div>
+                    </div>
+                    
+                    
+                    <br>
+                    <div class="row form-group noPrint">
+                        <div class="">
+                            <div class="col-md-2 nopaddigIzq">
+                                <div id="captchaXml" class="captcha">
+                                    <img id="ctl00_MainContent_ImgCaptchaXml" class="captchaimage" src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/GeneraCaptcha(1).aspx">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <span id="ctl00_MainContent_LblTitleCaptchaTxt" class="control-label">Proporcione los dígitos de la imagen*:</span>
+                                <input name="ctl00$MainContent$TxtCaptchaNumbersXml" type="text" maxlength="5" id="ctl00_MainContent_TxtCaptchaNumbersXml" class="form-control" onchange="habilitarBoton();" oninput="habilitarBoton();">
+                            </div>
+                            <div class="col-md-3 derecha">
+                                <br>
+                                <input type="submit" name="ctl00$MainContent$BtnBusquedaXml" value="Verificar CFDI" id="ctl00_MainContent_BtnBusquedaXml" disabled="disabled" class="aspNetDisabled btn btn-primary pull-right">
+                            </div>
+                            <div class="col-md-3"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-12 form-group noPrint">
+                        <div class="col-md-8 pull-left text-muted text-vertical-align-button">
+                            * Datos obligatorios
+                        </div>
+                    </div>
+
+                    
+
+                    
+                    
+                    <div class="row">
+                        
+                    </div>
+                
+                    <div class="row">
+                        <div id="validaTamanioXml" class="col-md-12 alert alert-danger aviso" style="display:none">
+                            <h5 class="lblAviso" style="text-align: center;">
+                                <label id="lblAviso_Xm">El archivo es demasiado grande. Tamaño máximo: 6MB</label>
+                            </h5>
+                        </div>
+                    </div>
+
+                     
+                         
+                    
+
+                    
+                    
+
+                    
+
+                    
+                    <br>
+                    
+                    
+                    <div class="clearfix noPrint" style="margin: 0px 0px 10px 0px">
+                            <div class="pull-right">
+                                <input type="hidden" name="ctl00$MainContent$strBusquedaXml" id="ctl00_MainContent_strBusquedaXml">
+                                <input type="button" id="BtnImprimirXml" style="display:none;" value="Imprimir" onclick="javascript: window.print();" class="btn btn-primary">
+                            </div>
+                        </div>
+                    
+                    <br class="noPrint">
+                    <br class="noPrint">
+                    <br class="noPrint">
+                </div>
+ 
+            </div>
+
+
+        </div>
+
+    <div id="ctl00_MainContent_UpdateProgress1" style="display:none;" role="status" aria-hidden="true">
+	
+            <br>
+            <div class="progresofondo">
+            </div>
+            <div class="progreso">
+                <img src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/ajax-loader.gif" style="float: left; margin-top: 5px;" alt="">
+                <h2 style="width: 200px; float: left; font-size: 12pt;">Buscando CFDI...</h2>
+            </div>
+        
+</div>
+
+    <script type="text/javascript">
+        function validarCaracteres() {
+            supressUpdatePanelRequestErrorCharacters("#ctl00_MainContent_TxtRfcReceptor");
+            supressUpdatePanelRequestErrorCharacters("#ctl00_MainContent_TxtRfcEmisor");
+        }
+
+
+        function performCheck() {
+
+            var respuesta = true;
+
+            $('[name*="Txt"]').each(function () {
+
+                var idEndText = $(this)[0].id.split('_')[$(this)[0].id.split('_').length - 1];
+
+                if (idEndText === "TxtCaptchaNumbersXml") {
+                    return true;
+                }
+
+                if (($('[name*="' + idEndText + '"]')[0].value != undefined && $('[name*="' + idEndText + '"]')[0].value.trim().length == 0) ||
+                    (idEndText == "TxtUUID" && $(this)[0].value == "________-____-____-____-____________")) {
+                    $("#marcaError_" + idEndText).addClass("form-text-error");
+                    $("#mensajeError_" + idEndText).show();
+                    respuesta = respuesta && false;
+                    $(this).focus();
+                }
+
+            });
+
+            return respuesta;
+        }
+
+
+        $('[name*="Txt"]').bind("blur", function (event) {
+
+            var idEndText = $(this)[0].id.split('_')[$(this)[0].id.split('_').length - 1];
+
+            if ($(this)[0].value != undefined && $(this)[0].value.trim().length > 0) {
+
+                if (idEndText != "TxtUUID" || (idEndText == "TxtUUID" && $(this)[0].value != "________-____-____-____-____________")) {
+                    $("#marcaError_" + idEndText).removeClass("form-text-error");
+                    $("#mensajeError_" + idEndText).hide();
+
+                    return false;
+
+                }
+            }
+
+
+            return true;
+
+        });
+
+    </script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            if (!sessionStorage.getItem('paginaCargada')) {
+                localStorage.removeItem('tabActivo');
+                sessionStorage.setItem('paginaCargada', 'true');
+            }
+
+            var tabActivo = localStorage.getItem('tabActivo') || 'verificaFolio';
+
+            if (tabActivo == 'verificaFolio') {
+                $('#chkFolio').prop('checked', true);
+                $('#chkFolio').click();
+            }
+
+            if (tabActivo == 'verificaXml') {
+                $('#chkXml').prop('checked', true);
+                $('#chkXml').click();
+            }
+
+            var texto = document.getElementById('ctl00_MainContent_TxtCaptchaNumbers').value;
+            if (texto != '') {
+                document.getElementById('ctl00_MainContent_TxtCaptchaNumbers').value = '';
+            }
+
+        });
+
+        function guardarTab(tabId) {
+
+            if (tabId == 'verificaFolio') {
+                
+                $('#ctl00_MainContent_PnlResultados').hide();
+                $('#ctl00_MainContent_PnlNoResultados').hide();
+                $('#ctl00_MainContent_VsResumenErrores').hide();
+                $('#ctl00_MainContent_alertEfos').hide(); 
+                $('#ctl00_MainContent_TxtCaptchaNumbers').val(''); 
+                limpiarXml();
+
+                $('#ctl00_MainContent_hdnConsultaFolio').val(true);
+                $('#BtnImprimirXml').hide();
+            }
+
+            if (tabId == 'verificaXml') {
+                $('#ctl00_MainContent_divAviso').hide();
+                $('#ctl00_MainContent_hdnConsultaFolio').val(false);
+
+                $('#ctl00_MainContent_TxtUUID').val('');
+                $('#ctl00_MainContent_TxtRfcEmisor').val('');
+                $('#ctl00_MainContent_TxtRfcReceptor').val('');
+                
+            }
+
+            localStorage.setItem('tabActivo', tabId);
+        }
+
+        function limpiarXmlCodeBind() {
+
+            
+            var consultaFolio = $('#ctl00_MainContent_hdnConsultaFolio').val();
+
+            if (consultaFolio == 'true') {
+                limpiarXml();
+            }
+        }
+
+        function limpiarXml() {
+            $('#ctl00_MainContent_divAvisoXml').hide();
+            $('#validaTamanioXml').hide();
+            $('#ctl00_MainContent_PnlResultadosXml').hide();
+            $('#txtArchivoXmlSeleccionado').val('');
+            $('#ctl00_MainContent_pnlErrorCaptchaXml').hide();
+            $('#ctl00_MainContent_alertNoResultadosXml').hide();
+            $('#ctl00_MainContent_alertSuccessXml').hide(); 
+            $('#ctl00_MainContent_fileUploadXML').val('');
+            $('#ctl00_MainContent_divValidacionXml').hide();
+            $('#ctl00_MainContent_alertEfosXml').hide();
+        }
+
+        function habilitarBoton() {
+            var texto = document.getElementById('ctl00_MainContent_TxtCaptchaNumbersXml').value;
+            var boton = document.getElementById('ctl00_MainContent_BtnBusquedaXml');
+
+            boton.disabled = texto.trim() === '';
+        }
+
+        function cambiarTab(tabId) {
+
+            $('.tab-content').removeClass('active');
+            $('#' + tabId).addClass('active');
+
+            var tabActivo = localStorage.getItem('tabActivo');
+
+            tabId = localStorage.getItem('tabActivo') || 'verificaFolio';
+
+            $('input[name="tabs"]').prop('checked', false);
+
+            if (tabId === 'verificaFolio') {
+                $('#chkFolio').prop('checked', true);
+                OcultarValidarCampoXML();
+            } else if (tabId === 'verificaXml') {
+                $('#chkXml').prop('checked', true);
+            }
+        }
+
+        function initFileUploader() {
+
+            const fileUploader = document.getElementById('ctl00_MainContent_fileUploadXML');
+            const txtNombreArchivo = document.getElementById('txtArchivoXmlSeleccionado');
+            const divAvisoXml = document.getElementById('validaTamanioXml');
+
+            if (fileUploader && txtNombreArchivo) {
+
+                fileUploader.addEventListener('change', function () {
+
+                    divAvisoXml.style.display = 'none';
+
+                    if (fileUploader.files.length > 0) {
+
+                        OcultarValidarCampoXML();
+
+                        txtNombreArchivo.value = fileUploader.files[0].name;
+
+                        const maxSize = "6" * 1024 * 1024;
+
+                        const file = fileUploader.files[0];
+
+                        if (file.size > maxSize) {
+                            const sizeInMB = (file.size / (1024 * 1024)).toFixed(2);
+                            
+                            divAvisoXml.style.display = 'block';
+                            fileUploader.value = '';
+                            txtNombreArchivo.value = "";
+
+                            return;
+                        }
+
+                    }
+                    else {
+                        txtNombreArchivo.value = "";
+                    }
+                });
+            }
+        }
+
+        if (window.addEventListener) {
+            window.addEventListener('load', initFileUploader, false);
+        } else if (window.attachEvent) {
+            window.attachEvent('onload', initFileUploader);
+        }
+
+        if (typeof Sys !== 'undefined') {
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+                initFileUploader();
+            });
+        }
+
+        // Prevenir reenvío Formulario con F5/Ctrl+R
+        window.addEventListener('keydown', function (e) {
+            if (e.keyCode == 116 || (e.ctrlKey && e.keyCode == 82)) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // Prevenir reenvío al usar el botón Atrás/Adelante
+        window.history.replaceState(null, null, window.location.href);
+
+        function ShowProgressForFileUpload() {
+            if (document.getElementById('chkXml').checked) {
+                var fileUpload = document.getElementById('ctl00_MainContent_fileUploadXML');
+                if (fileUpload && fileUpload.files.length > 0) {
+                    $get('ctl00_MainContent_UpdateProgress1').style.display = 'block';
+                    return true;
+                } else {
+                    return true;
+                }
+            }
+            return true;
+        }
+
+        function MostrarValidarCampoXML() {
+            // Mostrar mensaje de error
+            var validaTxtXml = document.getElementById('validaTxtXml');
+            if (validaTxtXml) {
+                validaTxtXml.style.display = 'block';
+            }
+
+            // Poner en rojo el asterisco del label
+            var validaLblXml = document.getElementById('validaLblXml');
+            if (validaLblXml) {
+                validaLblXml.style.color = 'red';
+                validaLblXml.style.fontWeight = 'bold';
+            }
+        }
+
+        function OcultarValidarCampoXML() {
+            // Ocultar mensaje de error
+            var validaTxtXml = document.getElementById('validaTxtXml');
+            if (validaTxtXml) {
+                validaTxtXml.style.display = 'none';
+            }
+
+            // Restablecer color del asterisco
+            var validaLblXml = document.getElementById('validaLblXml');
+            if (validaLblXml) {
+                validaLblXml.style.color = '';
+                validaLblXml.style.fontWeight = '';
+            }
+        }
+
+        function showBotonImprimir() {
+            $('#BtnImprimirXml').show();
+        }
+
+    </script>
+
+    <link href="./Verificación de Comprobantes Fiscales Digitales por Internet_files/stilosVerificaXml.css" rel="stylesheet">
+
+
+                    <div id="dvAlertMaster"></div>
+                </div>
+                <div class="footer noPrint">
+                </div>
+            </div>
+        </main>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("ctl00_MainContent_VsResumenErrores"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_MainContent_VsResumenErrores = document.all ? document.all["ctl00_MainContent_VsResumenErrores"] : document.getElementById("ctl00_MainContent_VsResumenErrores");
+ctl00_MainContent_VsResumenErrores.displaymode = "List";
+ctl00_MainContent_VsResumenErrores.validationGroup = "Busqueda";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+$("#ctl00_MainContent_TxtUUID").mask("hhhhhhhh-hhhh-hhhh-hhhh-hhhhhhhhhhhh");limpiarXmlCodeBind();OcultarValidarCampoXML();cambiarTab('verificaXml');
+(function(id) {
+    var e = document.getElementById(id);
+    if (e) {
+        e.dispose = function() {
+            Array.remove(Page_ValidationSummaries, document.getElementById(id));
+        }
+        e = null;
+    }
+})('ctl00_MainContent_VsResumenErrores');
+Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_MainContent_UpdateProgress1"));
+});
+//]]>
+</script>
+<span style="display: none !important;"><input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value=""></span><span style="display: none !important;"><input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value=""></span><span style="display: none !important;"><input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="JOEU9BAS+7W2uBqWQeeUADzN+HZPrpfuIuP9OMO9BWFTalpS+OlzueuYeaJ7+DYphJgBj+VQwOUgZJBZPtOr81tXCOLu1HDwlS/wi43vmywns2BT9quql6eRXNl7IUYTE3ENLlCtb816Rz4Jp00G5qhB087wveJWfEXEF3DR4l0fZtiGPu/5PD9O7ru8sCvkgvtZqBln0bmONS3Fj/yZ4L2XCJjI5o++YNogu9jlIahawu6EbTfRzXZJk6D90H6aKg2sv9DD8kYaTeJ2Fq+sdQP3vs2G6xxXtlAVaSx/aIbQG92UvH6lBT66fM//7ucGENjaF70Bym/50e8D9P9BmrPZdAIYF0uIiGHyBW57QFIF++4wJfm7z6Hagz53Re7/xi7xAjH5eUA1j3W/6KGdF7vi0rYY5hgpqmQK1edsN9AGzv7FxQmOdmnYxJJp8/rgiI4ptKXpcg2DC7zjAXvPD2vnEk7PMxuiEkYx6t8TRkePfuEYt0IJw/QqNrEBLWvqnqe5u2ql+ojlNgwWvduRS5ZLQoX6gpCJWfqoJhERMxmDxUAhjIISjWiPi1yLNiubwOS7fm6ksxPYsSoQR9gUjQowBV/Etazj1k8CdZPmHqS56WXygJAyomUOPQQSnWLT9BNrytJ+wNMWmXRnS2kzdh1lWCphCdPNEgvlMcYSXFMXzhb83xFj4EEUrMdsYb3u2hZRpCuezG9xBjvGM62kshFfHbW2+aYgFDuj5jmrDkbo94QhrHNU1JjxH7H0lvpizdIc9Zm6tugAWoMwufZHhYU8y9YvPCk89lJdhBWS7JAswgRhbxUptL+Hiw81X91DbTZBXWZ1whlu/VmpijaLSwUQIVdfiSU6GqGvl+Ow7sjr5+SNHyw1umDrSKLrKWxFmhLpWdZwjdhwGDMEOi9iewcuyhthdo26noyd4UcufbS3VlNzO5TdS3e6XKwQqpBts1nCTXCJW049TuO3VbabI3OI66s3oEugVPvPi05xodsRf2ycFXN13xcQJvGidZmDEF8O0TLYzhaZyPR4rV3yvnPYV8Brgx4HUFHksweZ3/hK/2j/ex27YWl9PkliQBMVdcO7nfTRxXHhG+koPP913i9umUnqC7MhX+NZZo8Y0U6MhLXoU5rwZilodQKJnmdXiPQ/vz7G2N8UVWFNQUMizHtqmxb3R1TUkTefFiYIgVXX7xf+M+8NrL0IengCkaUyS1rUsJpgUahQ87s1iUoNYwu+9MR7/a7GsSAwJs1HSKLDvgIbEUC6GtBkjBe3uJYNGiUfSeh+qL/IBS9ANeNyTtSA614iSqC3tLx+GjeCgBJCSQYQ55v+k6Ukj5IxmElexliy+5PR8pH/l8AG2LuOVHxsMseFvjDEPy+t925HInlExszeJvbursGMD3GyzNyD8+lD52MX6TcZb17P62245lKqgUNlN29yKT0K/yb7SU75W2Ye46lAgD9JG6koLZ6F1Ic5D/EnJufDtTYIN9Fqh6jILFpw9PJgeYET9mC6H315q8zIn0wfcp4IE/rkiCQ2z622IhD+LnCWF8S9KZLw+gl1iJXNvlY+6L762+NiYzyC62piWubOT3BXCAeRB3nPRwwE05jGZ7WXe9qDiq+mIsB26f9HKrhFExd7dZGr5cQTs6Vdh1SjHszRaEioRn7VjuS0vg=="></span><span style="display: none !important;"><input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334"></span><span style="display: none !important;"><input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value=""></span></form>
+    <script type="text/javascript">
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(endRequest);
+
+        function endRequest(sender, e) {
+            if (e.get_error()) {
+
+                if ($("#divRedLenta") != undefined) {
+                    $("#divRedLenta").remove();
+                }
+
+                var newDivSuccess = document.createElement('div');
+                newDivSuccess.id = "divRedLenta";
+                newDivSuccess.className = "col-md-12 alert alert-warning alert-dismissible";
+                newDivSuccess.innerHTML = "<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>¡Atención! <br/></strong> En estos momentos el servicio de red presenta lentitud, favor de intentar nuevamente.";
+                document.getElementById('dvAlertMaster').appendChild(newDivSuccess);
+                $('html, body').animate({ scrollTop: $('#dvAlertMaster').offset().top }, 'slow');
+                //alert('En estos momentos el servicio de red presenta lentitud, favor de intentar nuevamente.');
+
+                e.set_errorHandled(true);
+            }
+        }
+
+        (function () {
+            if (Sys && Sys.UI && Sys.UI.DomEvent && Sys.UI.DomEvent._removeHandler) {
+                var originalRemoveHandler = Sys.UI.DomEvent._removeHandler;
+
+                Sys.UI.DomEvent._removeHandler = function (a, e, f) {
+                    // Si el elemento o el evento no existen, simplemente salimos
+                    if (!a || !a._events || !a._events[e]) {
+                        return;
+                    }
+
+                    try {
+                        var d = null,
+                            c = a._events[e];
+                        for (var b = 0, g = c.length; b < g; b++) {
+                            if (c[b].handler === f) {
+                                d = c[b].browserHandler;
+                                break;
+                            }
+                        }
+                        if (a.removeEventListener)
+                            a.removeEventListener(e, d, false);
+                        else if (a.detachEvent)
+                            a.detachEvent("on" + e, d);
+                        c.splice(b, 1);
+                    } catch (err) {
+                        // Silenciamos errores por seguridad
+                        if (window.console) {
+                            console.warn("Error en _removeHandler suprimido:", err);
+                        }
+                    }
+                };
+            }
+        })();
+
+        window.urlCssv3 = "https://framework-gb.cdn.gob.mx/gm/v3/qa/assets/styles/main.css";
+    </script>
+    <script src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/gobmx_funcional.js.descarga" type="text/javascript"></script> 
+    <script src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/ColorLineamientosGobMx.js.descarga" type="text/javascript"></script>
+
+
+<footer class="main-footer " style="background-color: rgb(97, 18, 50) !important;"><div class=""><div class="container"><div class="bottom-buffer-footer row"><div class="col-sm-3 logo-footer navbar-footer-logo"><img src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/logo_blanco.svg" href="/" alt="logo gobierno de méxico" class="logo_footer"></div> <div class="accordion  col-xs-12 col-sm-3">            <input id="toggle1" type="checkbox" class="accordion-toggle" name="toggle">            <label for="toggle1"> <h5>Enlaces</h5></label>            <section><div class="" style="padding-left: 0px;"><ul class="nav-list"><li><a href="https://data.buengobierno.gob.mx/databuengobierno" target="_blank" rel="noopener" title="Enlace abre en ventana nueva">Datos abiertos de la SABG</a></li><li><a href="http://www.ordenjuridico.gob.mx/" target="_blank" rel="noopener" title="Enlace abre en ventana nueva">Marco Jurídico</a></li><li><a href="https://consultapublicamx.plataformadetransparencia.org.mx/vut-web/faces/view/consultaPublica.xhtml#inicio" target="_blank" rel="noopener" title="Enlace abre en ventana nueva">Plataforma Nacional de Transparencia</a></li><li><a href="https://transparencia.gob.mx/" target="_blank" rel="noopener" title="Enlace abre en ventana nueva">Transparencia para el pueblo</a></li><li><a href="https://alertadores.buengobierno.gob.mx/" target="_blank" rel="noopener" title="Enlace abre en ventana nueva">Alerta</a></li></ul></div></section>      </div> <div class="accordion col-xs-12 col-sm-3">            <input id="toggle2" type="checkbox" class="accordion-toggle" name="toggle">            <label for="toggle2"> <h5>¿Qué es gob.mx?</h5></label>            <section><div class=""><p>Es el portal único de trámites, información y participación ciudadana. <a href="https://www.gob.mx/que-es-gobmx">Leer más</a></p><ul class="nav-list"><li><a href="https://datos.gob.mx/" target="_blank">Portal de datos abiertos</a></li><li><a href="https://www.gob.mx/accesibilidad" target="_blank">Declaración de accesibilidad</a></li><li><a href="https://www.gob.mx/terminos" target="_blank">Términos y Condiciones</a></li></ul></div> </section>      </div><div class="title  col-xs-12 col-sm-3"><h5 class="link-a"><a class="footer" id="SIDEC" href="https://sidec.buengobierno.gob.mx/#!/" target="_blank" rel="sidec">Denuncia contra servidores públicos</a></h5>
+<span class="col-xs-5 col-sm-12 col-md-11 social-media">Síguenos en</span><ul class="col-xs-7 col-sm-12 col-md-11 list-inline social-media"><li><a data-v-6b1f797a="" id="Facebook" href="https://www.facebook.com/gobmexico" target="_blank" rel="noopener" title="enlace a facebook abre en una nueva ventana" class="sendEst share-info footer"><img alt="Facebook" src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/facebook.png"></a></li><li style="margin-left: 2px; margin-right: 2px;"><a data-v-6b1f797a="" id="Twitter" href="https://twitter.com/GobiernoMX" target="_blank" rel="noopener" title="Enlace a twitter abre en una nueva ventana" class="sendEst share-info footer"><img alt="Twitter" src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/twitter.png"></a></li><li style="margin-left: 2px; margin-right: 5px;"><a data-v-6b1f797a="" id="Instagram" href="https://www.instagram.com/gobmexico/" target="_blank" rel="noopener" title="Enlace a instagram abre en una nueva ventana" class="sendEst share-info footer"><img alt="Instagram" src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/instagram.png"></a></li><li style="margin-left: 2px; margin-right: 2px;"><a data-v-6b1f797a="" id="Youtube" href="https://www.youtube.com/@gobiernodemexico" target="_blank" rel="noopener" title="Enlace a youtube abre en una nueva ventana" class="sendEst share-info footer"><img alt="Youtube" src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/youtube.png"></a></li></ul> <ul class="list-inline">
+            <li>
+              <div class="logo-079">
+              <a href="tel:+079" target="_blank">                <img src="./Verificación de Comprobantes Fiscales Digitales por Internet_files/079.png" href="/" alt="logo 079" class="logo-079">
+</a>              </div>
+            </li>
+          </ul></div></div></div></div></footer><div id="snd-modal-overlay" style="display: none;">
+  <div id="snd-modal-box">
+    <button id="snd-modal-close">×</button>
+    <div id="snd-modal-icon">i</div>
+    <h2>Aviso importante</h2>
+    <p>
+      Todas las plataformas digitales del Gobierno de México deben seguir los lineamientos establecidos en el 
+      <strong>Sistema Nacional de Diseño (SND)</strong>. Si tu implementación se desarrolla con la Gráfica base 
+      (v.1, v.2 o v.3), es necesario que migres a este nuevo estándar a la brevedad.
+    </p>
+    <a href="https://www.snd.gob.mx/" target="_blank" id="snd-modal-link">Visitar SND</a>
+  </div>
+</div></body></html>
